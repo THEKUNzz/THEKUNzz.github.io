@@ -3,14 +3,12 @@ title_zh: "图形学研究"
 name_en: "B-SplineCV: B-spline Regression Control Variates for Monte Carlo Rendering"
 name_zh: "B-SplineCV：面向蒙特卡洛离线渲染的 B 样条回归控制变量"
 summary_en: >-
-  My master's thesis studies variance reduction for offline Monte Carlo rendering. The method constructs a bicubic
-  B-spline regression surface from sampled illumination values and uses it as a control variate to reduce estimator
-  variance. I also analyzed the sparse linear system in the fitting process and accelerated the solver with sparse
-  Cholesky decomposition and LSQR, achieving about 10x average speedup in the thesis experiments.
+  My master's thesis studies variance reduction for offline Monte Carlo rendering. B-SplineCV constructs a bicubic
+  B-spline regression surface as a control variate, captures nonlinear local illumination distributions more stably
+  than polynomial CVLS, and accelerates the sparse fitting system with Cholesky and LSQR solvers.
 summary_zh: >-
-  我的硕士论文研究离线蒙特卡洛渲染中的方差缩减问题。方法利用采样得到的光强值构建双三次 B 样条回归曲面，
-  并将其作为控制变量来降低估计方差；同时分析拟合过程中的稀疏矩阵结构，使用稀疏 Cholesky 分解和
-  LSQR 迭代法优化求解，在论文实验中实现了约 10 倍的平均效率提升。
+  我的硕士论文研究离线蒙特卡洛渲染中的方差缩减问题。B-SplineCV 使用双三次 B 样条回归曲面构造控制变量，
+  相比多项式 CVLS 更稳定地拟合复杂局部光强分布，并通过 Cholesky 与 LSQR 求解器加速稀疏拟合系统。
 tags:
   - Offline Rendering
   - Monte Carlo Integration
@@ -18,18 +16,21 @@ tags:
   - Control Variates
   - PBRT-V3
 figures:
-  - src: /assets/images/graphics/bsplinecv-workflow.png
-    caption_en: "Research workflow: B-spline control variates, accuracy validation, and solver optimization."
-    caption_zh: "研究流程：B 样条控制变量、精度验证与求解效率优化。"
-  - src: /assets/images/graphics/bspline-surface.png
-    caption_en: "Bicubic B-spline surface used to model local illumination distribution."
-    caption_zh: "用于拟合局部光强分布的双三次 B 样条曲面。"
-  - src: /assets/images/graphics/bunny-ours.png
-    caption_en: "PBRT rendering result with the proposed B-SplineCV pipeline."
-    caption_zh: "基于 B-SplineCV 管线的 PBRT 渲染结果。"
-  - src: /assets/images/graphics/killeroos-ours.png
-    caption_en: "Specular scene used for global illumination and variance-reduction validation."
-    caption_zh: "用于全局光照与方差缩减验证的高光材质场景。"
-  - src: /assets/images/graphics/bunny-error-map.png
-    caption_en: "Error-map visualization for rendering quality analysis."
-    caption_zh: "用于渲染质量分析的误差图可视化。"
+  - src: /assets/images/graphics/variance-convergence.png
+    caption_en: "Variance convergence: B-SplineCV reduces estimator variance faster than standard MC and polynomial CVLS."
+    caption_zh: "方差收敛对比：B-SplineCV 相比标准 MC 和多项式 CVLS 更快降低估计方差。"
+  - src: /assets/images/graphics/bspline-kde-16.png
+    caption_en: "KDE at 16x16 scale: B-SplineCV gives a smoother and more concentrated fit to the true distribution."
+    caption_zh: "16x16 像素尺度 KDE：B-SplineCV 对真实分布的拟合更平滑、更集中。"
+  - src: /assets/images/graphics/cvls-kde-16.png
+    caption_en: "CVLS KDE baseline at the same scale, showing wider fluctuation around the target distribution."
+    caption_zh: "同尺度下的 CVLS KDE 基线，围绕真实分布的波动更宽。"
+  - src: /assets/images/graphics/mse-boxplot-16.png
+    caption_en: "MSE distribution: B-SplineCV shows lower error and stronger stability at larger pixel-block scale."
+    caption_zh: "MSE 分布：B-SplineCV 在较大像素块尺度下误差更低、稳定性更好。"
+  - src: /assets/images/graphics/orb-ours.png
+    caption_en: "Final rendering result from the proposed pipeline on a glossy PBRT scene."
+    caption_zh: "在高光 PBRT 场景上得到的最终渲染结果。"
+  - src: /assets/images/graphics/killeroos-error-map.png
+    caption_en: "Error-map visualization used to inspect local rendering quality and residual variance."
+    caption_zh: "用于观察局部渲染质量与残余方差的误差图可视化。"

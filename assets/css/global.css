@@ -146,7 +146,7 @@ div.lazy {
 
 .graphics-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.85rem;
 }
 
@@ -176,5 +176,11 @@ div.lazy {
 @media (max-width: 767.98px) {
     .graphics-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .graphics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
