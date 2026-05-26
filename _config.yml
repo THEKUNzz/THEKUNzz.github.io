@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "THEKUNzz Academic Homepage"
+title: "Triton Yao | Academic Homepage"
 email: ""
 description: >-
-  Bilingual academic homepage for THEKUNzz.
+  Bilingual academic homepage and technical blog for Triton Yao.
 baseurl: "" # User GitHub Pages sites, e.g. THEKUNzz.github.io, should keep this empty.
 url: "https://THEKUNzz.github.io"
 
@@ -42,5 +42,4 @@ timezone: Asia/Shanghai
 collections:
   - publications
   - news
-  - showcase
   - posts

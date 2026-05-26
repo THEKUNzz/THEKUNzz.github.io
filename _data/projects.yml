@@ -1,0 +1,25 @@
+- name: "Paper Reading Assistant Agent"
+  name_zh: "论文阅读助手智能体"
+  role: "Creator / Full-stack Agent System"
+  date: "2026"
+  url: "https://github.com/THEKUNzz/papar-reading-assistant-agent"
+  tags:
+    - LLM Agents
+    - Paper Reading
+    - FastAPI
+    - Next.js
+    - SSE
+    - Multimodal
+  summary: >-
+    An AI-powered paper reading assistant that keeps the original PDF layout while enabling instant explanation
+    for selected text, formulas, figures, and tables.
+  summary_zh: >-
+    一个面向学术论文阅读的大模型智能体系统，在保留 PDF 原版排版的同时，支持文本、公式、图片和表格的即时解释与分析。
+  highlights:
+    - "PDF-native reading experience with contextual LLM assistance."
+    - "Alt-region selection for figure/table analysis and selected-text explanation."
+    - "Streaming responses through SSE with configurable model providers."
+  highlights_zh:
+    - "保留 PDF 原始版式，围绕论文上下文提供大模型辅助阅读。"
+    - "支持文本选择解释，以及 Alt 框选图片/表格进行视觉区域分析。"
+    - "通过 SSE 实现流式回复，并支持多种大模型 Provider 配置。"

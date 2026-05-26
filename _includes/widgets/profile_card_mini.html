@@ -39,6 +39,12 @@
                         <a class="email-text" href="mailto:{{ site.data.profile.email }}">
                             {{ site.data.profile.email | replace: "@", "(at)" }}
                         </a>
+                        {% if site.data.profile.email_secondary %}
+                        <br/>
+                        <a class="email-text" href="mailto:{{ site.data.profile.email_secondary }}">
+                            {{ site.data.profile.email_secondary | replace: "@", "(at)" }}
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
 

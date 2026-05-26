@@ -1,6 +1,7 @@
-# THEKUNzz Academic Homepage
+# Triton Yao Academic Homepage
 
-This repository contains a bilingual academic homepage for `THEKUNzz`, based on
+This repository contains a bilingual academic homepage and technical blog for
+Triton Yao, based on
 the [`academic-homepage`](https://github.com/luost26/academic-homepage) Jekyll template.
 
 ## Edit Your Information
@@ -9,9 +10,10 @@ the [`academic-homepage`](https://github.com/luost26/academic-homepage) Jekyll t
 - Navigation: `_data/navigation.yml`
 - Homepage display options: `_data/display.yml`
 - Publications: `_publications/`
+- Projects: `_data/projects.yml`
 - News: `_news/`
 - Blog posts: `_posts/`
-- Portrait: `assets/images/photos/portrait.jpg`
+- Portrait: `assets/images/photos/portrait.png`
 
 ## Deploy To GitHub Pages
 

@@ -3,6 +3,10 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
+    color: #20242a;
+    background:
+        linear-gradient(180deg, #f7f9fb 0%, #ffffff 42%),
+        #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -11,25 +15,25 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .card {
-    border-radius: 0.8rem!important;
+    border-radius: 0.5rem!important;
 }
 
 .card-img-overlay {
-    border-radius: 0.8rem!important;
+    border-radius: 0.5rem!important;
 }
 
 .rounded-xl {
-    border-radius: 0.8rem!important;
+    border-radius: 0.5rem!important;
 }
 
 .rounded-xl-bottom {
-    border-bottom-right-radius: 0.8rem !important;
-    border-bottom-left-radius: 0.8rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
 }
 
 .rounded-xl-top {
-    border-top-left-radius: 0.8rem !important;
-    border-top-right-radius: 0.8rem !important;
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
 }
 
 
@@ -43,9 +47,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(255, 255, 255, 0.82) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(32, 36, 42, 0.08);
 }
 
 .inline-badge {
@@ -90,4 +95,30 @@ div.lazy {
 
 .email-text {
     font-family: Source Code Pro, monospace;
+}
+
+.feature-panel {
+    border: 1px solid rgba(32, 36, 42, 0.07);
+}
+
+.project-item h5 a {
+    color: #1f4f64;
+}
+
+.project-item h5 a:hover {
+    color: #8a5a00;
+    text-decoration: none;
+}
+
+.tech-badge {
+    border: 1px solid rgba(31, 79, 100, 0.22);
+    color: #1f4f64;
+    background-color: #f6fafb;
+    font-weight: 600;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.btn-outline-dark {
+    border-color: #20242a;
 }

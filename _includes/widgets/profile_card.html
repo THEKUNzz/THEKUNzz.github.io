@@ -52,6 +52,11 @@
                         <a class="pr-3" href="mailto:{{ site.data.profile.email }}">
                             <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
                         </a>
+                        {% if site.data.profile.email_secondary %}
+                        <a class="pr-3" href="mailto:{{ site.data.profile.email_secondary }}">
+                            <i class="far fa-envelope"></i> <span class="email-text">{{ site.data.profile.email_secondary | replace: "@", "(at)" }}</span>
+                        </a>
+                        {% endif %}
 
                         {% if site.data.profile.gscholar %}
                         {%- if site.data.profile.gscholar contains 'scholar.google' -%}

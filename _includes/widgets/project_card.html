@@ -1,0 +1,48 @@
+{% assign projects = site.data.projects %}
+{% if projects %}
+<div class="my-3 p-0 bg-white shadow-sm rounded-xl feature-panel">
+    <h6 class="border-bottom border-gray p-3 mb-0">
+        <i class="fas fa-code-branch"></i> Featured Projects / 代表项目
+    </h6>
+    <div class="p-3">
+        {% for project in projects %}
+        <article class="project-item {% unless forloop.last %}mb-3 pb-3 border-bottom border-gray{% endunless %}">
+            <div class="d-flex flex-wrap align-items-start">
+                <div class="mr-auto">
+                    <h5 class="mb-1">
+                        <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
+                    </h5>
+                    <div class="text-muted small">{{ project.name_zh }} · {{ project.role }} · {{ project.date }}</div>
+                </div>
+                <a class="btn btn-sm btn-outline-dark mt-1" href="{{ project.url }}" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <p class="mt-3 mb-2">{{ project.summary }}</p>
+            <p class="mb-2 text-muted">{{ project.summary_zh }}</p>
+            <div class="mb-2">
+                {% for tag in project.tags %}
+                <span class="badge badge-light tech-badge">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            <div class="row small">
+                <div class="col-md-6">
+                    <ul class="mb-0 pl-3">
+                        {% for item in project.highlights %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="mb-0 pl-3">
+                        {% for item in project.highlights_zh %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
