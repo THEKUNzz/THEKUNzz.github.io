@@ -10,13 +10,16 @@ body_attr: >-
 
 <div class="row">
     <div class="col-12 col-lg-10">
-        <h1 class="pt-4">Publications / 论文发表</h1>
+        <h1 class="pt-4">
+            <span data-lang="en">Publications</span>
+            <span data-lang="zh">论文发表</span>
+        </h1>
         {% if site.publications.size == 0 %}
         <div class="my-3 p-4 bg-white shadow-sm rounded-xl">
-            <p class="mb-2">
+            <p class="mb-2" data-lang="en">
                 Manuscripts are currently in preparation or under submission. Accepted papers will be listed here.
             </p>
-            <p class="mb-0 text-muted">
+            <p class="mb-0 text-muted" data-lang="zh">
                 论文目前处于准备、投稿或审稿阶段，正式录用后将在这里更新。
             </p>
         </div>

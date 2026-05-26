@@ -1,0 +1,34 @@
+{% assign graphics = site.data.graphics %}
+{% if graphics %}
+<div class="my-3 p-0 bg-white shadow-sm rounded-xl feature-panel">
+    <h6 class="border-bottom border-gray p-3 mb-0">
+        <i class="fas fa-cube"></i>
+        <span data-lang="en">{{ graphics.title_en }}</span>
+        <span data-lang="zh">{{ graphics.title_zh }}</span>
+    </h6>
+    <div class="p-3">
+        <h5 class="mb-2">
+            <span data-lang="en">{{ graphics.name_en }}</span>
+            <span data-lang="zh">{{ graphics.name_zh }}</span>
+        </h5>
+        <p data-lang="en">{{ graphics.summary_en }}</p>
+        <p data-lang="zh">{{ graphics.summary_zh }}</p>
+        <div class="mb-3">
+            {% for tag in graphics.tags %}
+            <span class="badge badge-light tech-badge">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <div class="graphics-grid">
+            {% for figure in graphics.figures %}
+            <figure class="graphics-figure">
+                <img src="{{ figure.src | relative_url }}" alt="{{ figure.caption_en }}">
+                <figcaption>
+                    <span data-lang="en">{{ figure.caption_en }}</span>
+                    <span data-lang="zh">{{ figure.caption_zh }}</span>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}

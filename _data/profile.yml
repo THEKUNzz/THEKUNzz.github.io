@@ -3,8 +3,12 @@ secondary_name: "姚甲涛 / jtyao"
 navbar_name: "Triton Yao"
 
 positions:
-- name: "M.S. in Computer Science, NWAFU"
-- name: "LLM Agents, Reinforcement Learning, and Offline Rendering"
+- name: >-
+    <span data-lang="en">M.S. in Computer Science, NWAFU</span>
+    <span data-lang="zh">西北农林科技大学 计算机科学硕士</span>
+- name: >-
+    <span data-lang="en">LLM Agents, Reinforcement Learning, and Offline Rendering</span>
+    <span data-lang="zh">大模型智能体、强化学习与离线渲染</span>
 
 
 email: "jtyao@iflytek.com"
@@ -21,37 +25,53 @@ github: THEKUNzz
 
 short_bio_text_justify: false
 short_bio: >-
-  <p>
-    <strong>中文：</strong>你好，我是姚甲涛，也使用英文名 Triton Yao。我于西北农林科技大学（NWAFU）
-    完成计算机科学本科与硕士阶段学习。我的兴趣集中在大模型智能体、多智能体系统、强化学习，以及计算机图形学中的离线渲染。
-  </p>
-  <p>
-    <strong>English:</strong> I am Triton Yao, also known as jtyao. I received both my B.S. and M.S. training in
-    Computer Science at Northwest A&F University (NWAFU). My work explores large language model agents,
-    multi-agent systems, reinforcement learning, and offline rendering in computer graphics.
-  </p>
-  <p>
-    <strong>Current Focus / 近期关注：</strong> building practical LLM-powered research tools, agentic workflows for
-    reading and reasoning, and learning-based systems that connect perception, decision-making, and generation.
-  </p>
+  <div data-lang="zh">
+    <p>
+      你好，我是姚甲涛，也使用英文名 Triton Yao。我于西北农林科技大学（NWAFU）完成计算机科学本科与硕士阶段学习。
+      我的兴趣集中在大模型智能体、多智能体系统、强化学习，以及计算机图形学中的离线渲染。
+    </p>
+    <p>
+      近期我关注能真正落地的 LLM 研究工具、面向论文阅读与推理的智能体工作流，以及连接感知、决策和生成的学习系统。
+    </p>
+  </div>
+  <div data-lang="en">
+    <p>
+      I am Triton Yao, also known as jtyao. I received both my B.S. and M.S. training in Computer Science
+      at Northwest A&F University (NWAFU). My work explores large language model agents, multi-agent systems,
+      reinforcement learning, and offline rendering in computer graphics.
+    </p>
+    <p>
+      I am currently interested in practical LLM-powered research tools, agentic workflows for reading and reasoning,
+      and learning-based systems that connect perception, decision-making, and generation.
+    </p>
+  </div>
 
 portrait_url: /assets/images/photos/portrait.png
 portrait_caption: >-
   Triton Yao
 
 education:
-- name: Northwest A&F University (NWAFU) / 西北农林科技大学
+- name: >-
+    <span data-lang="en">Northwest A&F University (NWAFU)</span>
+    <span data-lang="zh">西北农林科技大学</span>
+  logo: /assets/images/badges/nwafu.jpg
   position: >- 
-    M.S. in Computer Science / 计算机科学硕士
+    <span data-lang="en">M.S. in Computer Science</span>
+    <span data-lang="zh">计算机科学硕士</span>
   date: 2022 - 2025
-- name: Northwest A&F University (NWAFU) / 西北农林科技大学
+- name: >-
+    <span data-lang="en">Northwest A&F University (NWAFU)</span>
+    <span data-lang="zh">西北农林科技大学</span>
+  logo: /assets/images/badges/nwafu.jpg
   position: >-
-    B.S. in Computer Science / 计算机科学本科
+    <span data-lang="en">B.S. in Computer Science</span>
+    <span data-lang="zh">计算机科学本科</span>
   date: 2018 - 2022
 
 experience:
 - name: Paper Reading Assistant Agent
   position: >-
-    Built an LLM-powered academic paper reading assistant with PDF-aware interaction, multimodal region analysis,
-    streaming responses, and configurable model providers.
+    <span data-lang="en">Built an LLM-powered academic paper reading assistant with PDF-aware interaction,
+    multimodal region analysis, streaming responses, and configurable model providers.</span>
+    <span data-lang="zh">构建面向学术论文阅读的大模型智能体，支持 PDF 原版阅读、选区分析、流式回复和多模型 Provider 配置。</span>
   date: 2026

@@ -1,5 +1,25 @@
 // aHR0cHM6Ly9naXRodWIuY29tL2x1b3N0MjYvYWNhZGVtaWMtaG9tZXBhZ2U=
 $(function () {
+    function applyLanguage(lang) {
+        var safeLang = lang === "en" ? "en" : "zh";
+        document.documentElement.setAttribute("lang", safeLang);
+        document.body.setAttribute("data-current-lang", safeLang);
+        try {
+            localStorage.setItem("site-lang", safeLang);
+        } catch (e) {}
+    }
+
+    var savedLang = "zh";
+    try {
+        savedLang = localStorage.getItem("site-lang") || "zh";
+    } catch (e) {}
+    applyLanguage(savedLang);
+
+    $("[data-lang-toggle]").on("click", function () {
+        var nextLang = document.body.getAttribute("data-current-lang") === "zh" ? "en" : "zh";
+        applyLanguage(nextLang);
+    });
+
     lazyLoadOptions = {
         scrollDirection: 'vertical',
         effect: 'fadeIn',

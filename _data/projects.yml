@@ -10,12 +10,12 @@
     - Next.js
     - SSE
     - Multimodal
-  summary: >-
+  summary_en: >-
     An AI-powered paper reading assistant that keeps the original PDF layout while enabling instant explanation
     for selected text, formulas, figures, and tables.
   summary_zh: >-
     一个面向学术论文阅读的大模型智能体系统，在保留 PDF 原版排版的同时，支持文本、公式、图片和表格的即时解释与分析。
-  highlights:
+  highlights_en:
     - "PDF-native reading experience with contextual LLM assistance."
     - "Alt-region selection for figure/table analysis and selected-text explanation."
     - "Streaming responses through SSE with configurable model providers."

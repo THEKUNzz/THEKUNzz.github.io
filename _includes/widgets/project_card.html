@@ -2,7 +2,9 @@
 {% if projects %}
 <div class="my-3 p-0 bg-white shadow-sm rounded-xl feature-panel">
     <h6 class="border-bottom border-gray p-3 mb-0">
-        <i class="fas fa-code-branch"></i> Featured Projects / 代表项目
+        <i class="fas fa-code-branch"></i>
+        <span data-lang="en">Featured Projects</span>
+        <span data-lang="zh">代表项目</span>
     </h6>
     <div class="p-3">
         {% for project in projects %}
@@ -12,28 +14,31 @@
                     <h5 class="mb-1">
                         <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
                     </h5>
-                    <div class="text-muted small">{{ project.name_zh }} · {{ project.role }} · {{ project.date }}</div>
+                    <div class="text-muted small">
+                        <span data-lang="en">{{ project.role }} · {{ project.date }}</span>
+                        <span data-lang="zh">{{ project.name_zh }} · {{ project.date }}</span>
+                    </div>
                 </div>
                 <a class="btn btn-sm btn-outline-dark mt-1" href="{{ project.url }}" target="_blank">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
-            <p class="mt-3 mb-2">{{ project.summary }}</p>
-            <p class="mb-2 text-muted">{{ project.summary_zh }}</p>
+            <p class="mt-3 mb-2" data-lang="en">{{ project.summary_en }}</p>
+            <p class="mt-3 mb-2" data-lang="zh">{{ project.summary_zh }}</p>
             <div class="mb-2">
                 {% for tag in project.tags %}
                 <span class="badge badge-light tech-badge">{{ tag }}</span>
                 {% endfor %}
             </div>
             <div class="row small">
-                <div class="col-md-6">
+                <div class="col-md-12" data-lang="en">
                     <ul class="mb-0 pl-3">
-                        {% for item in project.highlights %}
+                        {% for item in project.highlights_en %}
                         <li>{{ item }}</li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12" data-lang="zh">
                     <ul class="mb-0 pl-3">
                         {% for item in project.highlights_zh %}
                         <li>{{ item }}</li>

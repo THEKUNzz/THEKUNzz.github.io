@@ -1,0 +1,35 @@
+title_en: "Graphics Research"
+title_zh: "图形学研究"
+name_en: "B-SplineCV: B-spline Regression Control Variates for Monte Carlo Rendering"
+name_zh: "B-SplineCV：面向蒙特卡洛离线渲染的 B 样条回归控制变量"
+summary_en: >-
+  My master's thesis studies variance reduction for offline Monte Carlo rendering. The method constructs a bicubic
+  B-spline regression surface from sampled illumination values and uses it as a control variate to reduce estimator
+  variance. I also analyzed the sparse linear system in the fitting process and accelerated the solver with sparse
+  Cholesky decomposition and LSQR, achieving about 10x average speedup in the thesis experiments.
+summary_zh: >-
+  我的硕士论文研究离线蒙特卡洛渲染中的方差缩减问题。方法利用采样得到的光强值构建双三次 B 样条回归曲面，
+  并将其作为控制变量来降低估计方差；同时分析拟合过程中的稀疏矩阵结构，使用稀疏 Cholesky 分解和
+  LSQR 迭代法优化求解，在论文实验中实现了约 10 倍的平均效率提升。
+tags:
+  - Offline Rendering
+  - Monte Carlo Integration
+  - B-Spline Regression
+  - Control Variates
+  - PBRT-V3
+figures:
+  - src: /assets/images/graphics/bsplinecv-workflow.png
+    caption_en: "Research workflow: B-spline control variates, accuracy validation, and solver optimization."
+    caption_zh: "研究流程：B 样条控制变量、精度验证与求解效率优化。"
+  - src: /assets/images/graphics/bspline-surface.png
+    caption_en: "Bicubic B-spline surface used to model local illumination distribution."
+    caption_zh: "用于拟合局部光强分布的双三次 B 样条曲面。"
+  - src: /assets/images/graphics/bunny-ours.png
+    caption_en: "PBRT rendering result with the proposed B-SplineCV pipeline."
+    caption_zh: "基于 B-SplineCV 管线的 PBRT 渲染结果。"
+  - src: /assets/images/graphics/killeroos-ours.png
+    caption_en: "Specular scene used for global illumination and variance-reduction validation."
+    caption_zh: "用于全局光照与方差缩减验证的高光材质场景。"
+  - src: /assets/images/graphics/bunny-error-map.png
+    caption_en: "Error-map visualization for rendering quality analysis."
+    caption_zh: "用于渲染质量分析的误差图可视化。"

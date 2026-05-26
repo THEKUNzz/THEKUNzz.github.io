@@ -9,6 +9,11 @@ body {
         #ffffff;
 }
 
+body[data-current-lang="zh"] [data-lang="en"],
+body[data-current-lang="en"] [data-lang="zh"] {
+    display: none !important;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 700;
@@ -51,6 +56,22 @@ h1, h2, h3, h4, h5, h6,
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(32, 36, 42, 0.08);
+}
+
+.lang-toggle {
+    min-width: 72px;
+    font-weight: 700;
+}
+
+.profile-title {
+    line-height: 1.15;
+}
+
+.school-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .inline-badge {
@@ -121,4 +142,39 @@ div.lazy {
 
 .btn-outline-dark {
     border-color: #20242a;
+}
+
+.graphics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.graphics-figure {
+    margin: 0;
+    border: 1px solid rgba(32, 36, 42, 0.08);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.graphics-figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #f7f9fb;
+    display: block;
+}
+
+.graphics-figure figcaption {
+    padding: 0.65rem 0.75rem;
+    color: #5f6975;
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 767.98px) {
+    .graphics-grid {
+        grid-template-columns: 1fr;
+    }
 }

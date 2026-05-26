@@ -22,6 +22,8 @@ navbar_title: Home
 
         {% include widgets/project_card.html %}
 
+        {% include widgets/graphics_card.html %}
+
         {% if site.data.display.homepage.show_news %}
         {% assign count_news = site.news | size %}
         {% if count_news > 0 %}

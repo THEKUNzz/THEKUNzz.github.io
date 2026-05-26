@@ -37,12 +37,12 @@
                 <div class="row small">
                     <div class="col text-center">
                         <a class="email-text" href="mailto:{{ site.data.profile.email }}">
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
+                            {{ site.data.profile.email }}
                         </a>
                         {% if site.data.profile.email_secondary %}
                         <br/>
                         <a class="email-text" href="mailto:{{ site.data.profile.email_secondary }}">
-                            {{ site.data.profile.email_secondary | replace: "@", "(at)" }}
+                            {{ site.data.profile.email_secondary }}
                         </a>
                         {% endif %}
                     </div>
