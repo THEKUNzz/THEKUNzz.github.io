@@ -1,8 +1,6 @@
 # Triton Yao Academic Homepage
 
-This repository contains a bilingual academic homepage and technical blog for
-Triton Yao, based on
-the [`academic-homepage`](https://github.com/luost26/academic-homepage) Jekyll template.
+This repository contains a bilingual academic homepage and technical blog for Triton Yao.
 
 ## Edit Your Information
 
@@ -36,7 +34,3 @@ bundle exec jekyll serve
 ```
 
 Open the local URL printed by Jekyll.
-
-## Template Credit
-
-Built with [`academic-homepage`](https://github.com/luost26/academic-homepage).
