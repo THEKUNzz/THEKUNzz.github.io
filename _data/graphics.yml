@@ -16,21 +16,21 @@ tags:
   - Control Variates
   - PBRT-V3
 figures:
+  - src: /assets/images/graphics/bsplinecv-workflow.png
+    caption_en: "Research workflow: B-spline control variates, accuracy validation, and solver optimization."
+    caption_zh: "研究流程：B 样条控制变量、精度验证与求解效率优化。"
+  - src: /assets/images/graphics/bspline-surface.png
+    caption_en: "Bicubic B-spline surface used to fit local illumination distributions."
+    caption_zh: "用于拟合局部光强分布的双三次 B 样条曲面。"
   - src: /assets/images/graphics/variance-convergence.png
     caption_en: "Variance convergence: B-SplineCV reduces estimator variance faster than standard MC and polynomial CVLS."
     caption_zh: "方差收敛对比：B-SplineCV 相比标准 MC 和多项式 CVLS 更快降低估计方差。"
-  - src: /assets/images/graphics/bspline-kde-16.png
-    caption_en: "KDE at 16x16 scale: B-SplineCV gives a smoother and more concentrated fit to the true distribution."
-    caption_zh: "16x16 像素尺度 KDE：B-SplineCV 对真实分布的拟合更平滑、更集中。"
   - src: /assets/images/graphics/cvls-kde-16.png
     caption_en: "CVLS KDE baseline at the same scale, showing wider fluctuation around the target distribution."
     caption_zh: "同尺度下的 CVLS KDE 基线，围绕真实分布的波动更宽。"
-  - src: /assets/images/graphics/mse-boxplot-16.png
-    caption_en: "MSE distribution: B-SplineCV shows lower error and stronger stability at larger pixel-block scale."
-    caption_zh: "MSE 分布：B-SplineCV 在较大像素块尺度下误差更低、稳定性更好。"
-  - src: /assets/images/graphics/orb-ours.png
-    caption_en: "Final rendering result from the proposed pipeline on a glossy PBRT scene."
-    caption_zh: "在高光 PBRT 场景上得到的最终渲染结果。"
-  - src: /assets/images/graphics/killeroos-error-map.png
-    caption_en: "Error-map visualization used to inspect local rendering quality and residual variance."
-    caption_zh: "用于观察局部渲染质量与残余方差的误差图可视化。"
+  - src: /assets/images/graphics/bunny-ours.png
+    caption_en: "Representative PBRT rendering result from the proposed B-SplineCV pipeline."
+    caption_zh: "基于 B-SplineCV 管线得到的代表性 PBRT 渲染结果。"
+  - src: /assets/images/graphics/killeroos-ours.png
+    caption_en: "Glossy scene rendering used to validate the method under complex illumination."
+    caption_zh: "用于复杂光照验证的高光材质场景渲染结果。"
